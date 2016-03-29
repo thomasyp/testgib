@@ -49,7 +49,7 @@ def RKGmethod(fuc,h,l,x_0,y_0):
 	print y_n
 
 def testfuc(x,y):
-	return 0.9*y-0.09*y**2
+	return 100*(1-np.exp(-x)-y)
 	
-Eulermethod(testfuc,0.1,2.0,0,1)
-RKmethod(testfuc,0.1,2.0,0,1)
+Eulermethod(testfuc,0.0001,0.1,0,0)
+RKmethod(testfuc,0.0001,0.1,0,0)
